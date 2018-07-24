@@ -2,6 +2,7 @@ from functools import reduce
 import hashlib as hl
 from collections import OrderedDict
 import json
+import pickle
 
 # Import two functions from our hash_util.py file. Omit the ".py" in the import
 from hash_util import hash_string_256, hash_block
@@ -26,12 +27,18 @@ owner = 'Max'
 participants = {'Max'}
 
 
+
 def load_data():
+    """Initialize blockchain + open transactions data from a file."""
+    global blockchain
+    global open_transactions
     with open('blockchain.txt', mode='r') as f:
+        # file_content = pickle.loads(f.read())
         file_content = f.readlines()
-        global blockchain
-        global open_transactions
+        # blockchain = file_content['chain']
+        # open_transactions = file_content['ot']
         blockchain = json.loads(file_content[0][:-1])
+        # We need to convert  the loaded data because Transactions should use OrderedDict
         updated_blockchain = []
         for block in blockchain:
             updated_block = {
@@ -44,6 +51,7 @@ def load_data():
             updated_blockchain.append(updated_block)
         blockchain = updated_blockchain
         open_transactions = json.loads(file_content[1])
+        # We need to convert  the loaded data because Transactions should use OrderedDict
         updated_transactions = []
         for tx in open_transactions:
             updated_transaction = OrderedDict(
@@ -56,10 +64,18 @@ load_data()
 
 
 def save_data():
+    """Save blockchain + open transactions snapshot to a file."""
     with open('blockchain.txt', mode='w') as f:
         f.write(json.dumps(blockchain))
         f.write('\n')
         f.write(json.dumps(open_transactions))
+        # save_data = {
+        #     'chain': blockchain,
+        #     'ot': open_transactions
+        # }
+        # f.write(pickle.dumps(save_data))
+    print('Saving failed!')
+
 
 
 def valid_proof(transactions, last_hash, proof):

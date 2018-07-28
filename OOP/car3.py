@@ -1,16 +1,8 @@
-class Car:
-    #constructor
-    def __init__(self, starting_top_speed=100):
-        self.top_speed = starting_top_speed
-        self.warnings = []
-    
-    #built-in method
-    def __repr__(self):
-        print('printing...')    
-        return 'top speed: {}, Warnings: {}'.format(self.top_speed, len(self.warnings))
+from vehicle import Vehicle
 
-    def drive(self):
-        print('I am driving not faster than {}'.format(self.top_speed))
+class Car(Vehicle):
+    def brag():
+        print('My car is nice!')
 
 #creating an object base on class
 car1 = Car()

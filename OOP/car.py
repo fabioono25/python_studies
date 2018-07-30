@@ -1,28 +1,26 @@
-class Car:
-    top_speed = 100
-    warnings = []
+from vehicle import Vehicle
 
-    def drive(self):
-        print('I am driving not faster than {}'.format(self.top_speed))
+class Car(Vehicle):
+    # top_speed = 100
+    # warnings = []
+    
+    def brag(self):
+        print('Look how cool my car is!')
 
-#creating an object base on class
+
 car1 = Car()
 car1.drive()
 
-# Car.top_speed = 1000
-car1.warnings.append('new warning')
-# car1.top_speed = 99
+# Car.top_speed = 200
+car1.add_warning('New warning')
+# car1.__warnings.append([])
+# print(car1.__dict__)
+print(car1)
 
-car2 = Car()
+car2 = Car(200)
 car2.drive()
-print(car2.warnings)
+print(car2.get_warnings())
 
-car3 = Car()
+car3 = Car(250)
 car3.drive()
-print(car2.warnings)
-
-'''I am driving not faster than 100
-I am driving not faster than 100
-['new warning']
-I am driving not faster than 100
-['new warning']'''
+print(car3.get_warnings())

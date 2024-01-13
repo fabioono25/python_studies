@@ -2,9 +2,13 @@
 
 - Variables, Functions, if statement
 - Types, Operators
-- Working with dictionaries
 - Libraries and lists
-- 
+- Strings
+- Enums
+- User inputs
+- Conditions
+- Dictionaries
+- Lists
 
 
 ## Useful Links/References

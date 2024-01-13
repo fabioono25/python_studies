@@ -8,7 +8,7 @@
 # examples of how to use strings in Python:
 
 # Create a string
-string = "Hello, World!"
+string = "hello, World!"
 print(string)
 
 # Access a character in a string
@@ -82,3 +82,7 @@ print(string.islower())
 print(string.isspace())
 print(string.istitle())
 print(string.isprintable())
+print(string.title())
+
+print("hi\nhow are you\\?")
+

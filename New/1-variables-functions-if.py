@@ -1,11 +1,15 @@
 # working with variables and functions
 
-# Variables
 import random
-
+# Variables
+name = "John"
+age = 25
+name1, HEIGHT, my_name, _name, name1 = "John", 25, "John", "John", "John"
 
 # player_choice = "rock"
 # computer_choice = "paper"
+x = 1 + 1 # example of statement
+
 
 # Functions
 def get_choice(player_choice):

@@ -1,6 +1,7 @@
 # Python Studies - Topics
 
 - Variables, Functions, if statement
+- Types, Operators
 - Working with dictionaries
 - Libraries and lists
 - 

@@ -19,6 +19,10 @@
 - Lambda functions (map, filter, reduce)
 - Recursion
 - Decorators
+- Annotations
+- Exceptions
+- as
+- as
 
 
 ## Useful Links/References

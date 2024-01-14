@@ -41,3 +41,8 @@ print(items)
 # append adds the list as a single item
 # extend adds the items of the list to the list
 
+
+# working with list comprehensions: it is a way to create lists
+# list comprehensions are a way to create lists
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+squares = [n*n for n in numbers]

@@ -12,11 +12,13 @@
 - Tuples
 - Dictionaries
 - Sets
-- as
-- as
-- as
-- as
-- as
+- Classes & Objects
+- Loops
+- Modules
+- Arguments
+- Lambda functions (map, filter, reduce)
+- Recursion
+- Decorators
 
 
 ## Useful Links/References

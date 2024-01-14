@@ -1,0 +1,3 @@
+
+def talk():
+    return "Meau!"

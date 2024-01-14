@@ -40,6 +40,19 @@ def who_wins(player_choice, computer_choice):
     else:
         return "Please choose rock, paper, or scissors."
 
+# working with nested functions
+def main_function():
+    def nested_function():
+        print("Hello from nested function")
+    nested_function()
+
+# example of closure. Definition: A closure is a function that remembers the values from the enclosing lexical scope even
+#     when the program flow is no longer in that scope.
+def outer_function():
+    x = 2
+    def inner_function():
+        print(x)
+    return inner_function
 
 # Call the function
 print(get_choice("rock"))
@@ -48,3 +61,6 @@ print(who_wins("rock", "scissors"))
 print(who_wins("paper", "rock"))
 print(who_wins("paper", "scissors"))
 print(who_wins("scissors", "rock"))
+main_function()
+closure = outer_function()
+closure()

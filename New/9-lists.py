@@ -17,8 +17,25 @@ print(things)
 things.extend(["Bob", "Rick"])
 print(things)
 
-things.append(["Bob", "Rick"])
+things.append(["zzz", "bbb"])
 print(things)
+
+things += ["Bob", "Rick"]
+print(things)
+
+things.remove("Bob")
+print(things)
+
+print(things.pop())
+print(things.pop(2))
+print(things)
+
+print(40*'-')
+
+# convert all items to string, before sorting
+items = ["Bob", "Rick", "David", "Syd", "Roger", "Nick"]
+sorted(items, key=str.lower)
+print(items)
 
 # difference between append and extend
 # append adds the list as a single item

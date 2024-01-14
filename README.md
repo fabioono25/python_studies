@@ -21,8 +21,8 @@
 - Decorators
 - Annotations
 - Exceptions
-- as
-- as
+- pip
+- Operator
 
 
 ## Useful Links/References
